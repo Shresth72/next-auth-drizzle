@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 88 101 242;
+    --color-black: 14 15 16;
+    /* TODO: add light theme colors */
+  }
+
+  .dark {
+    --color-background: 30 31 34;
+    --color-semibackground: 30 31 34;
+    --color-midground: 43 45 49;
+    --color-foreground: 49 51 56;
+    @apply text-gray-100;
+  }
+  body {
+    background-color: rgb(var(--color-foreground));
+  }
+
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: rgb(var(--color-background)) rgb(var(--color-midground));
+  }
+
+  *::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: rgb(var(--color-midground));
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: rgb(var(--color-background));
+    border-radius: 6px;
+    border: none;
+  }
+}
+
+/*
+  Hide scrollbar but keep scroll
+*/
+.hidden-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/*
+  Scrollbar that is only visible on hover
+*/
+.hover-scrollbar {
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &:not(:hover) {
+    scrollbar-width: 0;
+    &::-webkit-scrollbar-thumb {
+      background-color: transparent;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+  }
+}
+* {
+  outline: none !important;
+  &:focus-visible {
+    @apply ring-2 ring-primary;
+  }
+}
