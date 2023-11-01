@@ -1,0 +1,34 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1698665729994,
+      "tag": "0000_unusual_felicia_hardy",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1698666107838,
+      "tag": "0001_tough_madripoor",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1698666409819,
+      "tag": "0002_woozy_whiplash",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1698666901699,
+      "tag": "0003_lumpy_black_bolt",
+      "breakpoints": true
+    }
+  ]
+}
